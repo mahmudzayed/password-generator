@@ -7,7 +7,7 @@
 This repository contains Kubernetes deployment approach for a password generator REST API application written 
 in Python.
 
-The appliction is pretty simple. The application generates secure passwords and takes as input parameters in the API request:
+The application is pretty simple. The application generates secure passwords and takes as input parameters in the API request:
 
 - minimum length
 - number of special characters in the password
@@ -28,12 +28,12 @@ Refer to below links for the tasks for files stored under the [docs](/docs/) fol
 
 ---
 
-## Confguration Files
+## Configuration Files
 
 There are several folders containing application configurations:
 
 - [app](/app/) folder contains application source code and Dockerfile for containerising the app.
-- [helmchar](/helmchart/) folder contains the helm chart related files that can deploy the appliction in a Kubernetes cluster.
+- [helmchart](/helmchart/) folder contains the helm chart related files that can deploy the application in a Kubernetes cluster.
 - [terraform](/terraform/) folder stores all major configurations that deploys AWS EKS cluster on a custom VPC.
 - [kubernetes](/kubernetes/) folder contains all manifests related to custom resources, like Nginx ingress controller and AWS Cluster Autoscaler.
 

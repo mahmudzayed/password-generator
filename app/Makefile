@@ -1,4 +1,4 @@
-# Makefile
+## Makefile: Use this file to perform frequent tasks with short commands.
 
 CONTAINER_NAME="password-generator"
 IMAGE_NAME="password-generator"

@@ -2,19 +2,20 @@
 
 ## Dockerize Sample Application
 
-The sample app (file: [main.py](app/src/main.py)) is Dockerized using the [Dockerfile](app/Dockerfile) under 'app' direcetory.
+The sample app (file: [main.py](/app/src/main.py)) is Dockerized using the [Dockerfile](/app/Dockerfile) under 'app' directory.
 
-### `Dockerfile` considerations
+### `Dockerfile` Considerations
 
 - Current stable Python release is used, v3.12. Ref.: [here](https://docs.python.org/release/3.12.3/whatsnew/changelog.html#python-3-12-3-final).
 - Use v3.12 Python 'slim-bookworm' as base image.
 - Use separate application user to run application instead of '`root`'.
 - Restrict file permissions as necessary.
 - Store application dependencies in `requirements.txt` file.
+- A production WSGI server should be instead to run this application in live environment. Ref.: [here](https://flask.palletsprojects.com/en/3.0.x/deploying/).
 
 ### About the `Makefile`
 
-A [Makefile](app/Makefile) is provided to manage the container image management for convenience. Here's how to use it:
+A [Makefile](/app/Makefile) is provided to manage the container image management for convenience. Here's how to use it:
 
 These are set as variables in `Makefile` to perform tasks:
 
@@ -43,7 +44,7 @@ Available options for `Makefile` (run from `./app` directory in your terminal):
   - `make publish`: tag & publish image to Docker Hub.
     - Note: Login required for target Docker repository before publishing (use: `docker login`).
 
-### Run application locally using `Makefile`
+### Run Application Locally Using `Makefile`
 
 1. Go to application directory: `cd app`
 2. Build the image from `Dockerfile` & tag it: `make build`
@@ -56,7 +57,7 @@ Available options for `Makefile` (run from `./app` directory in your terminal):
         docker tag "password-generator":"v1.0.0" "zayedmahmud/password-generator":"v1.0.0"
         ```
 
-3. Test the app by running container off of local image: `make run`, which exposes the appliction to localhost at port `5000` (default):
+3. Test the app by running container off of local image: `make run`, which exposes the application to localhost at port `5000` (default):
 
     - Example output:
 
@@ -126,8 +127,8 @@ Available options for `Makefile` (run from `./app` directory in your terminal):
 
 A Helm chart named '**password-generator**' is created for the containerized application.
 
-- The chart is available under [helmchart/password-generator](./helmchart/password-generator/) folder.
-- Customized Helm values file (local) can be found at [helmchart/custom-values.yaml](helmchart/custom-values.yaml).
+- The chart is available under [helmchart/password-generator](/helmchart/password-generator/) folder.
+- Customized Helm values file (local) can be found at [helmchart/custom-values.yaml](/helmchart/custom-values.yaml).
 - The chart contains manifests for:
   - Deployment
   - Horizontal Pod Autoscaler (HPA)
@@ -135,7 +136,7 @@ A Helm chart named '**password-generator**' is created for the containerized app
   - Service
   - Service Account.
 
-### Testing the helm chart
+### Testing the Helm Chart
 
 **Notes:**
 
@@ -242,7 +243,7 @@ A Helm chart named '**password-generator**' is created for the containerized app
       ]
       ```
 
-10. Stop port-forwading started at Step-8 from specific terminal by pressing `CTRL+C`.
+10. Stop port-forwarding started at Step-8 from specific terminal by pressing `CTRL+C`.
 11. Uninstall the helm chart if all testings are completed:
 
     - `helm uninstall password-generator -n app`

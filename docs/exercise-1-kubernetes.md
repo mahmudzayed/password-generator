@@ -150,7 +150,7 @@ A Helm chart named '**password-generator**' is created for the containerized app
 **Install the chart:**
 
 1. Navigate to [helmchart](/helmchart/) folder: `cd helmchart`
-2. Update Helm chart's values, if required, in file: [custom-values.yaml](helmchart/custom-values.yaml)
+2. Update Helm chart's values, if required, in file: [custom-values.yaml](/helmchart/custom-values.yaml)
 3. (Optional) Dry-run to check manifests:
 
     ```sh
@@ -207,7 +207,6 @@ A Helm chart named '**password-generator**' is created for the containerized app
 9. Test app from browser or REST API client or a new shell, at `http://localhost:32080/`.
 
    - Snapshots from testing with REST API client:
-     - Get Application Homepage: ![App homepage](/docs/images/local-test-helm-homepage.png "Application Homepage")<br>
      - Generate passwords: ![Generate passwords](/docs/images/local-test-helm-generate-pass.png "Generate passwords")
    - Example (testing from terminal with `curl`):
 

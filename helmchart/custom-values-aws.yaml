@@ -1,0 +1,62 @@
+replicaCount: 1 # HPA handles replicas for high-availability
+
+image:
+  repository: zayedmahmud/password-generator
+  pullPolicy: IfNotPresent
+
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+serviceAccount:
+  create: true
+
+service:
+  type: NodePort
+  port: 5000
+
+resources:
+  limits:
+    cpu: 400m
+    memory: 256Mi
+  requests:
+    cpu: 200m
+    memory: 128Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
+  targetMemoryUtilizationPercentage: 70
+
+strategy:
+  maxSurge: 2
+  maxUnavailable: 1
+minReadySeconds: 5
+
+podLabels:
+  app: zhm
+  environment: demo
+
+podSecurityContext:
+  fsGroup: 999 ## uid/gid of 'appuser'
+securityContext:
+  capabilities:
+    drop:
+      - ALL
+  readOnlyRootFilesystem: true
+  runAsNonRoot: false ## if nothing is written to disk, set to 'true'
+  runAsUser: 999 ## uid/gid of 'appuser'
+
+ingress:
+  enabled: true
+  className: "alb"
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/group.name: pass-gen
+    alb.ingress.kubernetes.io/group.order: "10"
+  hosts:
+    - host:
+      paths:
+        - path: /
+          pathType: Prefix

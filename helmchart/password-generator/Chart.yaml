@@ -1,0 +1,7 @@
+apiVersion: v2
+name: password-generator
+description: A Helm chart for simple password generator tool.
+type: application
+version: 1.0.0
+# App version is also image tag
+appVersion: "v1.0.0"

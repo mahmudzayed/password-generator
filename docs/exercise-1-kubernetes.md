@@ -2,7 +2,7 @@
 
 ## Dockerize Sample Application
 
-The sample app (file: [main.py](/app/src/main.py)) is Dockerized using the [Dockerfile](/app/Dockerfile) under 'app' directory.
+The sample app (file: [main.py](../app/src/main.py)) is Dockerized using the [Dockerfile](../app/Dockerfile) under 'app' directory.
 
 ### `Dockerfile` Considerations
 
@@ -15,7 +15,7 @@ The sample app (file: [main.py](/app/src/main.py)) is Dockerized using the [Dock
 
 ### About the `Makefile`
 
-A [Makefile](/app/Makefile) is provided to manage the container image management for convenience. Here's how to use it:
+A [Makefile](../app/Makefile) is provided to manage the container image management for convenience. Here's how to use it:
 
 These are set as variables in `Makefile` to perform tasks:
 
@@ -127,8 +127,8 @@ Available options for `Makefile` (run from `./app` directory in your terminal):
 
 A Helm chart named '**password-generator**' is created for the containerized application.
 
-- The chart is available under [helmchart/password-generator](/helmchart/password-generator/) folder.
-- Customized Helm values file (local) can be found at [helmchart/custom-values.yaml](/helmchart/custom-values.yaml).
+- The chart is available under [helmchart/password-generator](../helmchart/password-generator/) folder.
+- Customized Helm values file (local) can be found at [helmchart/custom-values.yaml](../helmchart/custom-values.yaml).
 - The chart contains manifests for:
   - Deployment
   - Horizontal Pod Autoscaler (HPA)
@@ -149,8 +149,8 @@ A Helm chart named '**password-generator**' is created for the containerized app
 
 **Install the chart:**
 
-1. Navigate to [helmchart](/helmchart/) folder: `cd helmchart`
-2. Update Helm chart's values, if required, in file: [custom-values.yaml](/helmchart/custom-values.yaml)
+1. Navigate to [helmchart](../helmchart/) folder: `cd helmchart`
+2. Update Helm chart's values, if required, in file: [custom-values.yaml](../helmchart/custom-values.yaml)
 3. (Optional) Dry-run to check manifests:
 
     ```sh
@@ -207,7 +207,7 @@ A Helm chart named '**password-generator**' is created for the containerized app
 9. Test app from browser or REST API client or a new shell, at `http://localhost:32080/`.
 
    - Snapshots from testing with REST API client:
-     - Generate passwords: ![Generate passwords](/docs/images/local-test-helm-generate-pass.png "Generate passwords")
+     - Generate passwords: ![Generate passwords](images/local-test-helm-generate-pass.png "Generate passwords")
    - Example (testing from terminal with `curl`):
 
       ```sh

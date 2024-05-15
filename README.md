@@ -20,11 +20,11 @@ The application is pretty simple. The application generates secure passwords and
 
 There are 3 tasks for this project and the associated documentation and configurations are stored in this repository.
 
-Refer to below links for the tasks for files stored under the [docs](/docs/) folder:
+Refer to below links for the tasks for files stored under the [docs](docs/) folder:
 
-1. [Exercise 1: Kubernetes](/docs/exercise-1-kubernetes.md)
-2. [Exercise 2: Terraform](/docs/exercise-2-terraform.md)
-3. [Blue/green deployment testing on Kubernetes](/docs/extra-blue-green-deployment.md)
+1. [Exercise 1: Kubernetes](docs/exercise-1-kubernetes.md)
+2. [Exercise 2: Terraform](docs/exercise-2-terraform.md)
+3. [Blue/green deployment testing on Kubernetes](docs/extra-blue-green-deployment.md)
 
 ---
 
@@ -32,9 +32,9 @@ Refer to below links for the tasks for files stored under the [docs](/docs/) fol
 
 There are several folders containing application configurations:
 
-- [app](/app/) folder contains application source code and Dockerfile for containerising the app.
-- [helmchart](/helmchart/) folder contains the helm chart related files that can deploy the application in a Kubernetes cluster.
-- [terraform](/terraform/) folder stores all major configurations that deploys AWS EKS cluster on a custom VPC.
-- [kubernetes](/kubernetes/) folder contains all manifests related to custom resources, like Nginx ingress controller and AWS Cluster Autoscaler.
+- [app](app/) folder contains application source code and Dockerfile for containerising the app.
+- [helmchart](helmchart/) folder contains the helm chart related files that can deploy the application in a Kubernetes cluster.
+- [terraform](terraform/) folder stores all major configurations that deploys AWS EKS cluster on a custom VPC.
+- [kubernetes](kubernetes/) folder contains all manifests related to custom resources, like Nginx ingress controller and AWS Cluster Autoscaler.
 
 ---

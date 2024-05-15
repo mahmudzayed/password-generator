@@ -40,7 +40,7 @@ Follow the steps to deploy resources to your AWS account with necessary admin pr
    - `terraform apply "myplan"`
    - or `terraform apply`
 
-8. After succesful deployment, set `kubectl` context to target new cluster (here '`zhm-demo-eks-cluster`' is eks cluster name & '`us-east-1`' is target aws region):
+8. After successful deployment, set `kubectl` context to target new cluster (here '`zhm-demo-eks-cluster`' is eks cluster name & '`us-east-1`' is target aws region):
 
    - `aws eks --region us-east-1 update-kubeconfig --name zhm-demo-eks-cluster`
 
@@ -73,7 +73,7 @@ Follow the steps to deploy resources to your AWS account with necessary admin pr
 13. Check logs to verify: `kubectl logs -f -l app=cluster-autoscaler -n kube-system`
 14. Now, deploy helm chart for password-generator application:
     1. Go to proper directory: `cd ../helmchart`
-    2. Update Helm chart's values for AWS, if required, in file: [helmchart/custom-values-aws.yaml](/helmchart/custom-values-aws.yaml)
+    2. Update Helm chart's values for AWS, if required, in file: [helmchart/custom-values-aws.yaml](../helmchart/custom-values-aws.yaml)
     3. (Optional) Dry-run to check manifests:
 
         ```sh
@@ -104,8 +104,8 @@ Follow the steps to deploy resources to your AWS account with necessary admin pr
 18. Test app from browser or REST API client or a new shell, at `http://<AWS_LOAD_BALANCER_DNS_NAME>`.
 
    - Snapshots from testing with REST API client:
-     - Get Application Homepage: ![App homepage](/docs/images/aws-test-helm-homepage.png "Application Homepage")<br>
-     - Generate passwords: ![Generate passwords](/docs/images/aws-test-helm-generate-pass.png "Generate passwords")
+     - Get Application Homepage: ![App homepage](images/aws-test-helm-homepage.png "Application Homepage")<br>
+     - Generate passwords: ![Generate passwords](images/aws-test-helm-generate-pass.png "Generate passwords")
    - Example (testing from terminal with `curl`):
 
       ```sh

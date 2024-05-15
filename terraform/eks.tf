@@ -53,6 +53,18 @@ module "eks" {
   # Add current caller identity as an administrator
   enable_cluster_creator_admin_permissions = true
 
+  depends_on = [
+    aws_vpc.main,
+    aws_subnet.private_subnet_1,
+    aws_subnet.private_subnet_2,
+    aws_subnet.public_subnet_1,
+    aws_subnet.public_subnet_2,
+    aws_route_table.private,
+    aws_route_table.public,
+    aws_nat_gateway.natgw1,
+    aws_internet_gateway.main
+  ]
+
   tags = {
     environment       = var.environment
     project           = "${local.project}"

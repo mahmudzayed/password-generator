@@ -1,7 +1,7 @@
 .DS_Store
 
 # Local .terraform directories
-# **/.terraform/*
+**/.terraform/*
 
 # Terraform lockfile
 .terraform.lock.hcl

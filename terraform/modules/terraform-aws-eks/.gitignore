@@ -1,7 +1,17 @@
+eks-admin-cluster-role-binding.yaml
+eks-admin-service-account.yaml
+config-map-aws-auth*.yaml
+kubeconfig_*
+.idea
+
+#################################################################
+# Default .gitignore content for all terraform-aws-modules below
+#################################################################
+
 .DS_Store
 
 # Local .terraform directories
-# **/.terraform/*
+**/.terraform/*
 
 # Terraform lockfile
 .terraform.lock.hcl

@@ -2,7 +2,7 @@
 
 CONTAINER_NAME="password-generator"
 IMAGE_NAME="password-generator"
-IMAGE_TAG="v1.0.0"
+IMAGE_TAG="v1.0.1"
 APP_PORT=5000
 EXPOSED_PORT=5000
 TARGET_REPO="zayedmahmud/password-generator"
